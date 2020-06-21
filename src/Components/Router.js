@@ -6,6 +6,8 @@ import ChartPage from "../Routes/ChartPage"
 import FormPage from "../Routes/FormPage"
 import TimeData from "../Routes/TimeData"
 import Change from "../Routes/Change"
+import Input from "../Routes/Input"
+
 export default () => (
 	<Router>
 		<div>
@@ -17,7 +19,7 @@ export default () => (
 					<Route path="/FormPage" exact component={FormPage} />
 					<Route path="/TimeData" exact component={TimeData} />
 					<Route path="/Change" exact component={Change} />
-					
+					<Route path="/Input" exact component={Input} />
 					<Redirect from="*" to="/" />
 				</Switch>	
 			</div>

@@ -6,7 +6,7 @@ import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import update from "immutability-helper";
 import "./index.css";
-
+import { Link } from "react-router-dom";
 const type = "DragableBodyRow";
 
 const DragableBodyRow = ({
@@ -114,6 +114,10 @@ const Home = props => {
     };
     
     return (
+        <div>
+            <Link to="/Input">
+                인풋
+            </Link>
         <DndProvider backend={HTML5Backend}>
             <Table
                 columns={columns}
@@ -125,6 +129,13 @@ const Home = props => {
                 })}
             />
         </DndProvider>
+        
+        <input type="text"/>
+        <input type="text"/>
+        <input type="text"/>
+        <input type="text"/>
+        <input type="text"/>
+        </div>
     );
 };
 
