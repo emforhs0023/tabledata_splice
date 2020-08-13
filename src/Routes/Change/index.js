@@ -5,15 +5,21 @@ const Change =() => {
     const [ testList, srtTestList ] = useState([ "test1", "test2", "test3", "test4", "test5"])
 
     const [ list, setList ] = useState({
-        test1: "",
-        test2: "",
-        test3: "",
-        test4: "",
-        test5: "",
+        test1: "", test2: "", test3: "", test4: "", test5: "", 
     })
 
-    const test1 = (v) => (e) => {
-        let aa = e.target.value
+const test1 = (v) => (e) => {
+    const aa = e.target.value
+
+    // for(let i = 0; i < testList.length; i++){
+    //     if(testList[i] == v){
+    //         setList((prevState) => ({
+    //             ...prevState,
+    //             `${testList[i]}`: aa
+    //         }));
+    //     }
+    // }
+
 
         if(v == "test1"){
             setList((prevState) => ({
@@ -54,10 +60,9 @@ const Change =() => {
         <>
 
             {testList.map((v, i) => 
-                
-                    <div key={v + i}>
+                    <div key={v}>
                         <div >{v}</div>
-                        <input type="text"   onChange={test1(v)}/>
+                        <input type="text" onChange={test1(v)}/>
                         <div> {v}</div>
                     </div>
                 
